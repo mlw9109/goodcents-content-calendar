@@ -80,3 +80,5 @@ textarea { min-height:90px; resize:vertical; }
 .donut { width:160px; height:160px; border-radius:50%; margin:auto; }
 .emptyState { text-align:center; color:var(--muted); padding:28px; border:1px dashed var(--line); border-radius:18px; background:#fff; }
 @media (max-width: 1050px){ .app{grid-template-columns:1fr}.sidebar{position:relative;height:auto}.dashboardGrid,.insightGrid{grid-template-columns:1fr}.quickGrid{grid-template-columns:1fr}.main{padding:20px}.calendarGrid{min-width:900px}.calendarScroll{overflow:auto}.drawer{width:min(420px,100vw)} }
+.syncStatus { display:inline-flex; align-items:center; gap:8px; margin-bottom:14px; padding:8px 12px; border-radius:999px; background:#eefdf4; color:#166534; font-size:12px; font-weight:900; border:1px solid #bbf7d0; }
+.syncStatus::before { content:'●'; font-size:10px; }
