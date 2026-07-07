@@ -80,3 +80,54 @@ textarea { min-height:90px; resize:vertical; }
 .donut { width:160px; height:160px; border-radius:50%; margin:auto; }
 .emptyState { text-align:center; color:var(--muted); padding:28px; border:1px dashed var(--line); border-radius:18px; background:#fff; }
 @media (max-width: 1050px){ .app{grid-template-columns:1fr}.sidebar{position:relative;height:auto}.dashboardGrid,.insightGrid{grid-template-columns:1fr}.quickGrid{grid-template-columns:1fr}.main{padding:20px}.calendarGrid{min-width:900px}.calendarScroll{overflow:auto}.drawer{width:min(420px,100vw)} }
+/* Supabase working app styles */
+.appShell { min-height: 100vh; display: flex; background: #f7f4ef; color: #1f2937; }
+.sidebar { width: 250px; background: #ffffff; border-right: 1px solid #eee7df; padding: 28px 18px; flex-shrink: 0; }
+.brandLogo { color: #b4122f; font-size: 25px; font-weight: 900; line-height: 1; }
+.brandSub { color: #b4122f; font-size: 11px; font-weight: 800; letter-spacing: 1.6px; margin-top: 10px; }
+.navList { display: grid; gap: 12px; margin-top: 46px; }
+.navItem { border: 0; background: transparent; border-radius: 14px; padding: 14px 12px; display: flex; gap: 10px; align-items: center; font-weight: 800; text-align: left; cursor: pointer; color: #4b5563; }
+.navItem.active, .navItem:hover { background: #fff0f3; color: #b4122f; }
+.mainContent { flex: 1; padding: 34px 28px; overflow: auto; }
+.pageHeader { display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px; }
+.pageHeader h1 { font-size: 34px; margin: 0; }
+.btn { border: 0; border-radius: 12px; background: #f0f1f4; color: #1f2937; padding: 12px 18px; font-weight: 900; cursor: pointer; }
+.btn.primary { background: linear-gradient(90deg, #be123c, #f50072); color: white; }
+.btn.danger { background: #fee2e2; color: #991b1b; }
+.card, .welcomeCard { background: white; border: 1px solid #eee7df; border-radius: 20px; padding: 24px; margin-bottom: 18px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04); }
+.welcomeCard { border-color: #ffc9d3; background: linear-gradient(90deg, #fffafb, #fff5f7); }
+.eyebrow { color: #b4122f; font-size: 12px; font-weight: 900; letter-spacing: 1.4px; margin: 0 0 8px; }
+.statusBar, .connectionNotice { background: #fff0d6; color: #8a3a00; border-radius: 14px; padding: 14px 18px; display: flex; justify-content: space-between; font-weight: 900; margin-bottom: 20px; }
+.connectionNotice { background: #eef6ff; color: #184c7c; display: block; }
+.dashboardGrid { display: grid; grid-template-columns: minmax(0, 1fr) 430px; gap: 20px; }
+.quickActions { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.timelineItem, .tableRow { width: 100%; border: 0; background: white; border-bottom: 1px solid #f1ece6; padding: 18px 0; display: flex; justify-content: space-between; text-align: left; cursor: pointer; }
+.timelineItem h3, .tableRow h3 { margin: 12px 0 6px; }
+.timelineItem p, .tableRow p { margin: 0; color: #6b7280; }
+.badge { display: inline-block; border-radius: 999px; background: #e8f8ef; color: #047857; font-size: 12px; font-weight: 900; padding: 7px 12px; }
+.badge.promotion { background: #ffe4ec; color: #be123c; }
+.badge.social-media { background: #dcf7fb; color: #0891b2; }
+.badge.pop-kit { background: #ffedd5; color: #c2410c; }
+.calendarGrid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 10px; }
+.weekday { color: #6b7280; font-size: 12px; font-weight: 900; text-align: center; }
+.calendarDay { min-height: 86px; background: #fff; border: 1px solid #eee7df; border-radius: 16px; padding: 10px; }
+.calendarDay.big { min-height: 130px; }
+.holiday, .miniEvent { display: block; border: 0; border-radius: 10px; padding: 6px 8px; margin-top: 8px; font-size: 11px; font-weight: 900; background: #ffe900; color: #b4122f; text-align: left; width: 100%; }
+.miniEvent { background: #e7f8ed; color: #047857; cursor: pointer; }
+.formGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.formGrid label, .fullField { display: grid; gap: 8px; font-size: 12px; font-weight: 900; color: #6b7280; text-transform: uppercase; letter-spacing: .8px; }
+input, select, textarea { width: 100%; border: 1px solid #e5e7eb; border-radius: 12px; padding: 12px; font: inherit; background: white; color: #111827; text-transform: none; letter-spacing: normal; }
+textarea { min-height: 110px; resize: vertical; }
+.fullField { margin: 14px 0; }
+.assetGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.assetCard { border: 1px solid #eee7df; border-radius: 14px; padding: 18px; background: white; font-weight: 900; cursor: pointer; }
+.assetCard.selected { border-color: #be123c; background: #fff0f3; color: #be123c; }
+.modalOverlay { position: fixed; inset: 0; background: rgba(17, 24, 39, .55); display: grid; place-items: center; z-index: 50; }
+.modal { width: min(760px, calc(100vw - 32px)); max-height: calc(100vh - 32px); overflow: auto; background: white; border-radius: 22px; padding: 24px; }
+.modalHeader, .drawerHeader, .modalActions { display: flex; justify-content: space-between; align-items: center; gap: 14px; }
+.modalActions { justify-content: flex-end; margin-top: 20px; }
+.drawer { position: fixed; top: 0; right: 0; width: min(460px, 100vw); height: 100vh; background: white; box-shadow: -20px 0 50px rgba(0, 0, 0, .15); z-index: 60; padding: 24px; overflow: auto; }
+.assetList, .detailList { display: grid; gap: 10px; }
+.assetList span, .detailList div, .linkCard, .insightRow { background: #f9fafb; border: 1px solid #eef0f3; border-radius: 12px; padding: 12px; }
+.detailList div, .insightRow { display: flex; justify-content: space-between; }
+@media (max-width: 980px) { .appShell { display: block; } .sidebar { width: auto; } .dashboardGrid, .quickActions, .formGrid, .assetGrid { grid-template-columns: 1fr; } }
